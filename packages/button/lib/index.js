@@ -5,5 +5,5 @@ const styled_components_1 = require("styled-components");
 const StyledInput = styled_components_1.default.input `
   color: red;
 `;
-exports.Input = () => <StyledInput />;
-//# sourceMappingURL=index.jsx.map
+exports.Input = () => React.createElement(StyledInput, null);
+//# sourceMappingURL=index.js.map

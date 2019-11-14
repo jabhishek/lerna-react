@@ -1,1 +1,2 @@
-export declare const sum: (x: number, y: number) => number;
+/// <reference types="react" />
+export declare const Input: () => JSX.Element;

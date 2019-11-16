@@ -6,6 +6,6 @@ const StyledButton = styled_components_1.default.button `
   padding: 10px;
 `;
 exports.Button = ({ onClick, text, isDisabled = false }) => {
-    return React.createElement(StyledButton, { onClick: onClick, value: text, disabled: isDisabled, "aria-disabled": isDisabled });
+    return React.createElement(StyledButton, { onClick: onClick, disabled: isDisabled, "aria-disabled": isDisabled }, text);
 };
 //# sourceMappingURL=index.js.map

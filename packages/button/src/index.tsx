@@ -15,8 +15,7 @@ interface ButtonProps {
 export const Button = ({onClick, text, isDisabled = false}: ButtonProps) => {
     return <StyledButton
         onClick={onClick}
-        value={text}
         disabled={isDisabled}
         aria-disabled={isDisabled}
-    />;
+    >{text}</StyledButton>;
 }

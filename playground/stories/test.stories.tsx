@@ -1,13 +1,14 @@
 import * as React from 'react';
 import {Button} from '../../packages/button/src';
 import { storiesOf } from '@storybook/react';
-import {SyntheticEvent} from "react";
+import { withInfo } from "@storybook/addon-info";
+import { action } from "@storybook/addon-actions";
 
-const onClick = (e: SyntheticEvent<HTMLButtonElement>) => {
-    console.log('clicked', e);
-}
+const stories = storiesOf("Button", module);
+stories.addDecorator(withInfo as any);
+stories.addParameters({ info: { inline: true } });
 
-storiesOf('Input', module)
-    .add('with text', () => (
-        <Button onClick={onClick} text="Hello" />
+stories.add('default props', () => (
+        <Button onClick={action('onClick')} text="Hello" />
     ));
+

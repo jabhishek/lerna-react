@@ -6,6 +6,6 @@
     "typescript": "3.7.2"
   },
   "workspaces": [
-    "packages/*", "playground"
+    "packages/*"
   ]
 }

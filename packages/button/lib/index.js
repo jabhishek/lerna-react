@@ -13,13 +13,16 @@ var __rest = (this && this.__rest) || function (s, e) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const React = require("react");
 const styled_1 = require("@emotion/styled");
+const should_forward_prop_1 = require("@styled-system/should-forward-prop");
 const styled_system_1 = require("styled-system");
-const StyledButton = styled_1.default.button `
-  padding: 10px;
-  ${styled_system_1.color}
-`;
+const StyledButton = styled_1.default('button', { shouldForwardProp: should_forward_prop_1.default })(styled_system_1.color, styled_system_1.padding, styled_system_1.width, styled_system_1.borderRadius);
+const baseStyles = {
+    p: ["med", "large"],
+    width: ['100%', 'auto'],
+    borderRadius: '4px',
+};
 exports.Button = (_a) => {
-    var { onClick, text, isDisabled = false } = _a, rest = __rest(_a, ["onClick", "text", "isDisabled"]);
-    return React.createElement(StyledButton, Object.assign({ onClick: onClick, disabled: isDisabled, "aria-disabled": isDisabled }, rest), text);
+    var { onClick, children, isDisabled = false } = _a, rest = __rest(_a, ["onClick", "children", "isDisabled"]);
+    return React.createElement(StyledButton, Object.assign({ onClick: onClick, disabled: isDisabled, "aria-disabled": isDisabled }, baseStyles, rest), children);
 };
 //# sourceMappingURL=index.js.map

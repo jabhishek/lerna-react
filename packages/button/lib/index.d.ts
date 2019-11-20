@@ -1,9 +1,10 @@
-import * as StyledSystem from 'styled-system';
+import * as React from 'react';
+import { ColorProps, PaddingProps, WidthProps, BorderRadiusProps } from 'styled-system';
 import { MouseEventHandler } from "react";
-interface ButtonProps extends StyledSystem.ColorProps {
+interface ButtonProps extends ColorProps, WidthProps, PaddingProps, BorderRadiusProps {
     onClick: MouseEventHandler<HTMLInputElement>;
-    text: string;
+    children: React.ReactChild;
     isDisabled?: boolean;
 }
-export declare const Button: ({ onClick, text, isDisabled, ...rest }: ButtonProps) => JSX.Element;
+export declare const Button: ({ onClick, children, isDisabled, ...rest }: ButtonProps) => JSX.Element;
 export {};

@@ -11,7 +11,9 @@ stories.addParameters({ info: { inline: true } });
 
 stories.add('default props', () => (
     <ThemeProvider>
-        <Button onClick={action('onClick')} text="Hello" color="primary" />
+        <Button
+            onClick={action('onClick')}
+            color="primary">Hello</Button>
     </ThemeProvider>
     ));
 

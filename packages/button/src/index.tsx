@@ -1,29 +1,45 @@
 import * as React from 'react';
 import styled from "@emotion/styled";
-import * as StyledSystem from 'styled-system';
-import {color} from 'styled-system';
+import shouldForwardProp from '@styled-system/should-forward-prop';
+import {
+    color, ColorProps,
+    padding, PaddingProps,
+    width, WidthProps,
+    borderRadius, BorderRadiusProps,
+} from 'styled-system';
 import {MouseEventHandler} from "react";
 
-const StyledButton = styled.button`
-  padding: 10px;
-  ${color}
-`;
-interface ButtonProps extends StyledSystem.ColorProps {
+const StyledButton = styled('button', { shouldForwardProp })(
+  color,
+  padding,
+  width,
+  borderRadius
+);
+
+interface ButtonProps extends ColorProps, WidthProps, PaddingProps, BorderRadiusProps {
     /** Click handler */
     onClick: MouseEventHandler<HTMLInputElement>;
     /** button text */
-    text: string;
+    children: React.ReactChild;
     /** disabled state */
     isDisabled?: boolean;
 }
+
+const baseStyles = {
+    p: ["med", "large"],
+    width:['100%', 'auto'],
+    borderRadius: '4px',
+};
+
 /**
  * Basic button component
  */
-export const Button = ({onClick, text, isDisabled = false, ...rest}: ButtonProps) => {
+export const Button = ({onClick, children, isDisabled = false, ...rest}: ButtonProps) => {
     return <StyledButton
         onClick={onClick}
         disabled={isDisabled}
         aria-disabled={isDisabled}
+        {...baseStyles}
         {...rest}
-    >{text}</StyledButton>;
+    >{children}</StyledButton>;
 };

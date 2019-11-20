@@ -6,7 +6,8 @@ const emotion_theming_1 = require("emotion-theming");
 const react_1 = require("react");
 const defaultTheme = {
     colors: {
-        primary: 'red'
+        primary: 'red',
+        secondary: 'blue'
     }
 };
 exports.ThemeProvider = ({ theme = defaultTheme, children }) => {
@@ -19,4 +20,4 @@ exports.useTheme = () => {
     }
     return theme;
 };
-//# sourceMappingURL=index..js.map
+//# sourceMappingURL=index.js.map

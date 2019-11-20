@@ -32,11 +32,11 @@
     "@types/react": "16.9.11",
     "@types/styled-system": "5.1.4",
     "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "styled-system": "5.1.2"
+    "react-dom": "16.12.0"
   },
   "dependencies": {
     "@emotion/core": "10.0.22",
-    "emotion-theming": "10.0.19"
+    "emotion-theming": "10.0.19",
+    "styled-system": "5.1.2"
   }
 }

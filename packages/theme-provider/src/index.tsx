@@ -8,11 +8,12 @@ export interface ITheme extends StyledSystemTheme { }
 
 const defaultTheme:ITheme = {
     colors: {
-        primary: 'red'
+        primary: 'red',
+        secondary: 'blue'
     }
 };
 
-export const ThemeProvider = ({ theme = defaultTheme, children }: { theme: ITheme, children: React.ReactChildren }) => {
+export const ThemeProvider = ({ theme = defaultTheme, children }: { theme?: ITheme, children: React.ReactChildren | React.ReactChild }) => {
     return <EmotionThemeProvider theme={theme}>
         { children }
     </EmotionThemeProvider>

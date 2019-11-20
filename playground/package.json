@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@avj/button": "latest",
+    "@avj/theme-provider": "latest",
     "webpack": "^4.41.2"
   }
 }

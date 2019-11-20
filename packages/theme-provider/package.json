@@ -1,0 +1,42 @@
+{
+  "name": "@avj/theme-provider",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Abhishek Jain <abhi2000@gmail.com>",
+  "homepage": "https://github.com/jabhishek/lerna-react#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jabhishek/lerna-react.git"
+  },
+  "scripts": {
+    "pretsc": "rm -rf lib",
+    "tsc": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/jabhishek/lerna-react/issues"
+  },
+  "devDependencies": {
+    "@types/styled-system": "5.1.4",
+    "@types/react": "16.9.11",
+    "react": "16.12.0",
+    "styled-system": "5.1.2",
+    "react-dom": "16.12.0"
+  },
+  "dependencies": {
+    "emotion-theming": "10.0.19",
+    "@emotion/core": "10.0.22"
+  }
+}

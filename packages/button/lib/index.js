@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const React = require("react");
-const styled_components_1 = require("styled-components");
-const StyledButton = styled_components_1.default.button `
+const styled_1 = require("@emotion/styled");
+const StyledButton = styled_1.default.button `
   padding: 10px;
 `;
 exports.Button = ({ onClick, text, isDisabled = false }) => {

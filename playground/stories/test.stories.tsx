@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {Button} from '../../packages/button/src';
-import {ThemeProvider} from '../../packages/theme-provider/src/';
+import {Button} from '../../packages/Button/src';
+import {ThemeProvider} from '../../packages/ThemeProvider/src/';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";

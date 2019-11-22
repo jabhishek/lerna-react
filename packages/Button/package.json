@@ -40,5 +40,6 @@
   "peerDependencies": {
     "react": ">= 16.12",
     "react-dom": ">= 16.12"
-  }
+  },
+  "gitHead": "fd0c10196c58b4e1e94310f69623bdbfd0337fdf"
 }

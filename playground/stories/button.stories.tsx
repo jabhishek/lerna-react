@@ -8,9 +8,7 @@ import {SyntheticEvent} from "react";
 
 const stories = storiesOf("Button", module);
 const withTheme = (storyFn: any) => <ThemeProvider>
-    <div style={ {display: 'flex', flexDirection: 'column', alignItems: 'flex-start'} }>
         {storyFn()}
-    </div>
 </ThemeProvider>;
 
 stories.addDecorator(withInfo as any);
@@ -24,7 +22,7 @@ const onSubmit = (e: SyntheticEvent<any>) => {
 
 stories
     .add('With default props', () => (
-        <React.Fragment>
+        <div style={ {display: 'flex', flexDirection: 'column', alignItems: 'flex-start'} }>
             <Button
                 onClick={action('onClick')}
                 color="primary"
@@ -41,7 +39,6 @@ stories
             <Button
                 onClick={action('onClick')}
                 color="secondary"
-                width={['100%']}
             >
                 Secondary
             </Button>
@@ -55,7 +52,7 @@ stories
             >
                 Custom
             </Button>
-        </React.Fragment>
+        </div>
     ))
     .add('Inside form', () => (
         <form onSubmit={onSubmit}>

@@ -18,6 +18,13 @@ const defaultTheme:ITheme = {
         large: 12,
         xl: 16,
     },
+    radii: {
+      none: 0,
+      small: 4,
+      med: 8,
+      large: 12,
+      round: '100%',
+    },
     breakpoints: [
         "320px",
         "768px",

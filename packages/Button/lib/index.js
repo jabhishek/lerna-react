@@ -15,13 +15,18 @@ const React = require("react");
 const styled_1 = require("@emotion/styled");
 const should_forward_prop_1 = require("@styled-system/should-forward-prop");
 const styled_system_1 = require("styled-system");
-const StyledButton = styled_1.default('button', { shouldForwardProp: should_forward_prop_1.default })(styled_system_1.color, styled_system_1.padding, styled_system_1.width, styled_system_1.height, styled_system_1.borderRadius, {
-    cursor: 'pointer'
-});
+exports.StyledButton = styled_1.default('button', { shouldForwardProp: should_forward_prop_1.default })(styled_system_1.color, styled_system_1.padding, styled_system_1.width, styled_system_1.height, styled_system_1.borderRadius, {
+    cursor: 'pointer',
+}, props => ({
+    color: props.theme.colors.secondary,
+    "&:hover": {
+        color: props.theme.colors.primary,
+    }
+}));
 const baseStyles = {
     p: ["med", "large"],
     width: ['100%', 'auto'],
-    borderRadius: '4px',
+    borderRadius: 'med',
 };
 const getWidth = (width, fullWidth) => {
     if (fullWidth) {
@@ -34,6 +39,6 @@ exports.Button = (_a) => {
     if (type === 'submit' && !!onClick) {
         console.warn('Click handler was specified for a submit Button. Are you sure?');
     }
-    return React.createElement(StyledButton, Object.assign({ onClick: onClick, disabled: isDisabled, "aria-disabled": isDisabled, type: type }, baseStyles, rest, { width: getWidth(width, fullWidth) }), children);
+    return React.createElement(exports.StyledButton, Object.assign({ onClick: onClick, disabled: isDisabled, "aria-disabled": isDisabled, type: type }, baseStyles, rest, { width: getWidth(width, fullWidth) }), children);
 };
 //# sourceMappingURL=index.js.map

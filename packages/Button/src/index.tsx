@@ -10,21 +10,33 @@ import {
 } from 'styled-system';
 import {MouseEventHandler} from "react";
 
-const StyledButton = styled('button', {shouldForwardProp})(
+export const StyledButton = styled('button', {shouldForwardProp})(
     color,
     padding,
     width,
     height,
     borderRadius,
     {
-        cursor: 'pointer'
-    }
+        cursor: 'pointer',
+    },
+    props => ({
+        color: props.theme.colors.secondary,
+        "&:hover": {
+            color: props.theme.colors.primary,
+        }
+    }),
 );
+
+/*
+const StyledButton1 = styled.button`
+  color: ${(props: any) => props.theme.colors.secondary};
+`;
+*/
 
 interface ButtonProps extends ColorProps, WidthProps, PaddingProps, BorderRadiusProps, HeightProps {
     /** Click handler */
     onClick?: MouseEventHandler<HTMLInputElement>;
-    /** button text */
+    /** Button text */
     children: React.ReactChild;
     /** disabled state */
     isDisabled?: boolean;
@@ -37,7 +49,7 @@ interface ButtonProps extends ColorProps, WidthProps, PaddingProps, BorderRadius
 const baseStyles = {
     p: ["med", "large"],
     width: ['100%', 'auto'],
-    borderRadius: '4px',
+    borderRadius: 'med',
 };
 
 const getWidth = (width: any, fullWidth: boolean) => {
@@ -49,11 +61,11 @@ const getWidth = (width: any, fullWidth: boolean) => {
 };
 
 /**
- * Basic button component
+ * Basic Button component
  */
 export const Button = ({onClick, children, isDisabled = false, type = "button", fullWidth, width, ...rest}: ButtonProps) => {
     if (type === 'submit' && !!onClick) {
-        console.warn('Click handler was specified for a submit button. Are you sure?');
+        console.warn('Click handler was specified for a submit Button. Are you sure?');
     }
 
     return <StyledButton

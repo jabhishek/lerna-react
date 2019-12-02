@@ -32,7 +32,7 @@ const getWidth = (width, fullWidth) => {
 exports.Button = (_a) => {
     var { onClick, children, isDisabled = false, type = "button", fullWidth, width } = _a, rest = __rest(_a, ["onClick", "children", "isDisabled", "type", "fullWidth", "width"]);
     if (type === 'submit' && !!onClick) {
-        console.warn('Click handler was specified for a submit button. Are you sure?');
+        console.warn('Click handler was specified for a submit Button. Are you sure?');
     }
     return React.createElement(StyledButton, Object.assign({ onClick: onClick, disabled: isDisabled, "aria-disabled": isDisabled, type: type }, baseStyles, rest, { width: getWidth(width, fullWidth) }), children);
 };

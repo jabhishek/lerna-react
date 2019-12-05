@@ -38,8 +38,8 @@
     "styled-system": "5.1.2"
   },
   "peerDependencies": {
-    "@emotion/core": "10.0.22",
-    "emotion-theming": "10.0.19"
+    "@emotion/core": "^10.0.22",
+    "emotion-theming": "^10.0.19"
   },
   "gitHead": "fd0c10196c58b4e1e94310f69623bdbfd0337fdf"
 }

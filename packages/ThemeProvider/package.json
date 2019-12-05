@@ -29,15 +29,17 @@
     "url": "https://github.com/jabhishek/lerna-react/issues"
   },
   "devDependencies": {
+    "@emotion/core": "10.0.22",
     "@types/react": "16.9.11",
     "@types/styled-system": "5.1.4",
-    "react": "16.12.0",
-    "react-dom": "16.12.0"
-  },
-  "dependencies": {
-    "@emotion/core": "10.0.22",
     "emotion-theming": "10.0.19",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
     "styled-system": "5.1.2"
+  },
+  "peerDependencies": {
+    "@emotion/core": "10.0.22",
+    "emotion-theming": "10.0.19"
   },
   "gitHead": "fd0c10196c58b4e1e94310f69623bdbfd0337fdf"
 }

@@ -26,20 +26,23 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "devDependencies": {
+    "@emotion/core": "10.0.22",
+    "@emotion/styled": "10.0.23",
     "@types/react": "16.9.11",
     "@types/styled-system__should-forward-prop": "5.1.0",
     "react": "16.12.0",
-    "react-dom": "16.12.0"
-  },
-  "dependencies": {
-    "@emotion/core": "10.0.22",
-    "@emotion/styled": "10.0.23",
-    "@styled-system/should-forward-prop": "5.1.2",
+    "react-dom": "16.12.0",
     "styled-system": "5.1.2"
   },
+  "dependencies": {
+    "@styled-system/should-forward-prop": "5.1.2"
+  },
   "peerDependencies": {
+    "@emotion/core": "10.0.22",
+    "@emotion/styled": "10.0.23",
     "react": ">= 16.12",
-    "react-dom": ">= 16.12"
+    "react-dom": ">= 16.12",
+    "styled-system": "5.1.2"
   },
   "gitHead": "fd0c10196c58b4e1e94310f69623bdbfd0337fdf"
 }

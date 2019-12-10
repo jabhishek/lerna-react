@@ -21,8 +21,12 @@
     "ts-loader": "^6.2.1"
   },
   "dependencies": {
-    "@avj/button": "0.0.18-alpha.0",
-    "@avj/theme-provider": "0.0.6-alpha.0",
+    "@avj/button": "0.0.22-alpha.0",
+    "@avj/theme-provider": "0.0.10-alpha.0",
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
+    "emotion-theming": "^10.0.19",
+    "styled-system": "^5.1.4",
     "webpack": "^4.41.2"
   }
 }

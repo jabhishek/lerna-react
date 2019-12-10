@@ -12,33 +12,14 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const React = require("react");
-const styled_1 = require("@emotion/styled");
-const should_forward_prop_1 = require("@styled-system/should-forward-prop");
-const styled_system_1 = require("styled-system");
-exports.StyledButton = styled_1.default('button', { shouldForwardProp: should_forward_prop_1.default })(styled_system_1.color, styled_system_1.padding, styled_system_1.width, styled_system_1.height, styled_system_1.borderRadius, {
-    cursor: 'pointer',
-}, props => ({
-    color: props.theme.colors.secondary,
-    "&:hover": {
-        color: props.theme.colors.primary,
-    }
-}));
-const baseStyles = {
-    p: ["med", "large"],
-    width: ['100%', 'auto'],
-    borderRadius: 'med',
-};
-const getWidth = (width, fullWidth) => {
-    if (fullWidth) {
-        return ['100%'];
-    }
-    return width || baseStyles.width;
-};
+const box_1 = require("@avj/box");
+const getStyles_1 = require("./getStyles");
 exports.Button = (_a) => {
-    var { onClick, children, isDisabled = false, type = "button", fullWidth, width } = _a, rest = __rest(_a, ["onClick", "children", "isDisabled", "type", "fullWidth", "width"]);
-    if (type === 'submit' && !!onClick) {
-        console.warn('Click handler was specified for a submit Button. Are you sure?');
+    var { onClick, children, isDisabled = false, type = "button", fullWidth = false, width } = _a, rest = __rest(_a, ["onClick", "children", "isDisabled", "type", "fullWidth", "width"]);
+    if (type === "submit" && !!onClick) {
+        console.warn("Click handler was specified for a submit Button. Are you sure?");
     }
-    return React.createElement(exports.StyledButton, Object.assign({ onClick: onClick, disabled: isDisabled, "aria-disabled": isDisabled, type: type }, baseStyles, rest, { width: getWidth(width, fullWidth) }), children);
+    const styleProps = getStyles_1.getStyles({ width, fullWidth });
+    return (React.createElement(box_1.Box, Object.assign({ as: "button", onClick: onClick, disabled: isDisabled, "aria-disabled": isDisabled, type: type }, styleProps, rest), children));
 };
 //# sourceMappingURL=index.js.map

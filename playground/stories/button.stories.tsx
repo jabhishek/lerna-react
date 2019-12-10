@@ -25,6 +25,11 @@ stories
         <div style={ {display: 'flex', flexDirection: 'column', alignItems: 'flex-start'} }>
             <Button
                 onClick={action('onClick')}
+            >
+                Default
+            </Button>
+            <Button
+                onClick={action('onClick')}
                 color="primary"
             >
                 Primary
@@ -46,7 +51,6 @@ stories
                 onClick={action('onClick')}
                 color="white"
                 width={100}
-                height={50}
                 backgroundColor="black"
                 borderRadius={10}
             >

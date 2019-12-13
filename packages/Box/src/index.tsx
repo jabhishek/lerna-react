@@ -15,9 +15,9 @@ import {
     overflow, OverflowProps,
 } from 'styled-system';
 import * as React from "react";
-import {ButtonHTMLAttributes} from "react";
+import {AnchorHTMLAttributes, ButtonHTMLAttributes} from "react";
 
-type StyledSystemProps = LayoutProps &
+export type StyledSystemProps = LayoutProps &
     ColorProps &
     SpaceProps &
     BorderProps &
@@ -30,19 +30,24 @@ type StyledSystemProps = LayoutProps &
     OverflowProps &
     TypographyProps;
 
-interface ButtonHTMLProps extends React.DOMAttributes<any>, ButtonHTMLAttributes<any> {
-    as: 'button';
+// abhi-todo add types for other tags, in addition to button and anchor
+export interface ButtonHTMLProps extends React.DOMAttributes<HTMLButtonElement>, ButtonHTMLAttributes<HTMLButtonElement> {
+    as?: 'button';
 }
 
-interface AllHTMLProps extends React.DOMAttributes<any> {
-    as: string;
+interface AnchorHTMLProps extends React.DOMAttributes<HTMLAnchorElement>, AnchorHTMLAttributes<HTMLAnchorElement> {
+    as?: 'a';
 }
 
-type HTMLProps = AllHTMLProps | ButtonHTMLProps;
+interface AllHTMLProps<T> extends React.DOMAttributes<T> {
+    as?: Exclude<keyof JSX.IntrinsicElements, 'button' | 'a'>;
+}
+
+type HTMLProps = AllHTMLProps<any> | ButtonHTMLProps | AnchorHTMLProps;
 
 type BoxHTMLProps = React.RefAttributes<any> & HTMLProps;
 
-type BoxProps = BoxHTMLProps &
+export type BoxProps = BoxHTMLProps &
     StyledSystemProps;
 
 export const Box: React.FunctionComponent<BoxProps> = styled('div', {shouldForwardProp})(

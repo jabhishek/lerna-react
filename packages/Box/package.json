@@ -33,7 +33,8 @@
     "styled-system": "5.1.2"
   },
   "dependencies": {
-    "@styled-system/should-forward-prop": "5.1.2"
+    "@styled-system/should-forward-prop": "5.1.2",
+    "csstype": "2.6.7"
   },
   "peerDependencies": {
     "@emotion/styled": "^10.0.23",

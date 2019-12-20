@@ -1,5 +1,7 @@
+/** @jsx jsx */
 import styled from "@emotion/styled";
-import shouldForwardProp from '@styled-system/should-forward-prop';
+import {customProps, ICustomProps} from './customProps';
+import {createShouldForwardProp} from '@styled-system/should-forward-prop';
 import {
     background, BackgroundProps,
     border, BorderProps,
@@ -35,20 +37,23 @@ export interface ButtonHTMLProps extends React.DOMAttributes<HTMLButtonElement>,
     as?: 'button';
 }
 
-interface AnchorHTMLProps extends React.DOMAttributes<HTMLAnchorElement>, AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface AnchorHTMLProps extends React.DOMAttributes<HTMLAnchorElement>, AnchorHTMLAttributes<HTMLAnchorElement> {
     as?: 'a';
 }
 
-interface AllHTMLProps<T> extends React.DOMAttributes<T> {
+export interface AllHTMLProps<T> extends React.DOMAttributes<T> {
     as?: Exclude<keyof JSX.IntrinsicElements, 'button' | 'a'>;
 }
 
-type HTMLProps = AllHTMLProps<any> | ButtonHTMLProps | AnchorHTMLProps;
+type HTMLProps =  ButtonHTMLProps | AnchorHTMLProps | AllHTMLProps<any>;
 
-type BoxHTMLProps = React.RefAttributes<any> & HTMLProps;
+type BoxHTMLProps = HTMLProps & React.RefAttributes<any>;
 
 export type BoxProps = BoxHTMLProps &
-    StyledSystemProps;
+    StyledSystemProps &
+    ICustomProps;
+
+const shouldForwardProp = createShouldForwardProp(['cursor']);
 
 export const Box: React.FunctionComponent<BoxProps> = styled('div', {shouldForwardProp})(
     background,
@@ -63,4 +68,5 @@ export const Box: React.FunctionComponent<BoxProps> = styled('div', {shouldForwa
     typography,
     opacity,
     overflow,
+    customProps,
 );

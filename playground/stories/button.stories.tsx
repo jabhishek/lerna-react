@@ -5,6 +5,11 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from "@storybook/addon-info";
 import {action} from "@storybook/addon-actions";
 import {SyntheticEvent} from "react";
+import {Box} from "../../packages/Box/src";
+
+export const TestComponent = ({ text }: { text: string }) => {
+    return <div>{text}</div>
+}
 
 const stories = storiesOf("Button", module);
 const withTheme = (storyFn: any) => <ThemeProvider>
@@ -23,6 +28,11 @@ const onSubmit = (e: SyntheticEvent<any>) => {
 stories
     .add('With default props', () => (
         <div style={ {display: 'flex', flexDirection: 'column', alignItems: 'flex-start'} }>
+            <Button
+                onClick={action('onClick')}
+            >
+                Default
+            </Button>
             <Button
                 onClick={action('onClick')}
                 color="primary"
@@ -46,11 +56,13 @@ stories
                 onClick={action('onClick')}
                 color="white"
                 width={100}
-                height={50}
                 backgroundColor="black"
                 borderRadius={10}
             >
                 Custom
+            </Button>
+            <Button disabled>
+                Hello
             </Button>
         </div>
     ))
@@ -64,5 +76,11 @@ stories
                 I am inside form
             </Button>
         </form>
+    ))
+    .add('TestComponent', () => (
+        <TestComponent text="Abhi"/>
+    ))
+    .add('Box', () => (
+        <Box />
     ));
 

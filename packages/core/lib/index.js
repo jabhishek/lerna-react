@@ -5,3 +5,5 @@ exports.Box = index_1.Box;
 var ThemeProvider_1 = require("./ThemeProvider");
 exports.ThemeProvider = ThemeProvider_1.ThemeProvider;
 exports.useTheme = ThemeProvider_1.useTheme;
+var Theme_1 = require("./Theme");
+exports.defaultTheme = Theme_1.defaultTheme;

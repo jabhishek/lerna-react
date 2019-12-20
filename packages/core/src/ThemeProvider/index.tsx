@@ -3,7 +3,7 @@ import {Context, useContext} from 'react';
 import {ThemeContext} from '@emotion/core';
 import {ThemeProvider as EmotionThemeProvider} from 'emotion-theming';
 import {defaultTheme} from "../Theme";
-import { ITheme } from '..';
+import { ITheme } from '../Theme/ITheme';
 
 export const ThemeProvider = ({ theme = defaultTheme, children }: { theme?: ITheme, children: React.ReactChildren | React.ReactChild }) => {
     return <EmotionThemeProvider theme={theme}>

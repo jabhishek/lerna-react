@@ -12,8 +12,8 @@ export interface AnchorHTMLProps extends React.DOMAttributes<HTMLAnchorElement>,
 export interface AllHTMLProps<T> extends React.DOMAttributes<T> {
     as?: Exclude<keyof JSX.IntrinsicElements, 'button' | 'a'>;
 }
-declare type HTMLProps = AllHTMLProps<any> | ButtonHTMLProps | AnchorHTMLProps;
-declare type BoxHTMLProps = React.RefAttributes<any> & HTMLProps;
+declare type HTMLProps = ButtonHTMLProps | AnchorHTMLProps | AllHTMLProps<any>;
+declare type BoxHTMLProps = HTMLProps & React.RefAttributes<any>;
 export declare type BoxProps = BoxHTMLProps & StyledSystemProps & ICustomProps;
 export declare const Box: React.FunctionComponent<BoxProps>;
 export {};

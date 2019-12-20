@@ -1,11 +1,7 @@
 {
-  "name": "@avj/box",
-  "version": "0.0.7-alpha.0",
-  "description": "Box component",
-  "keywords": [
-    "react",
-    "button"
-  ],
+  "name": "@avj/core",
+  "version": "0.0.0",
+  "description": "> TODO: description",
   "author": "Abhishek Jain <abhi2000@gmail.com>",
   "homepage": "https://github.com/jabhishek/lerna-react#readme",
   "license": "MIT",
@@ -20,10 +16,17 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jabhishek/lerna-react.git"
+  },
   "scripts": {
     "pretsc": "rm -rf lib",
     "tsc": "tsc",
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/jabhishek/lerna-react/issues"
   },
   "devDependencies": {
     "@emotion/styled": "10.0.23",
@@ -37,7 +40,9 @@
     "csstype": "2.6.7"
   },
   "peerDependencies": {
+    "@emotion/core": "^10.0.x",
     "@emotion/styled": "^10.0.23",
+    "emotion-theming": "^10.0.19",
     "react": "^16.12.0",
     "styled-system": "^5.1.2"
   }

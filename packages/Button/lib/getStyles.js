@@ -23,4 +23,3 @@ exports.getStyles = (props) => {
     console.log("props", props);
     return Object.assign(Object.assign(Object.assign({}, baseStyles), getWidth(width, fullWidth)), (!!isDisabled && getDisabledStyles()));
 };
-//# sourceMappingURL=getStyles.js.map

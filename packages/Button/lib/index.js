@@ -12,14 +12,14 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@emotion/core");
-const src_1 = require("../../Box/src");
+const box_1 = require("@avj/box");
 const getStyles_1 = require("./getStyles");
 exports.Button = (_a) => {
     var { onClick, children, isDisabled = false, type = "button", fullWidth = false, width } = _a, rest = __rest(_a, ["onClick", "children", "isDisabled", "type", "fullWidth", "width"]);
     if (type === "submit" && !!onClick) {
         console.warn("Click handler was specified for a submit Button. Are you sure?");
     }
-    const styleProps = getStyles_1.getStyles({ width, fullWidth });
-    return (core_1.jsx(src_1.Box, Object.assign({ as: "button", color: "red", cursor: "not-allowed", onClick: onClick, disabled: isDisabled, "aria-disabled": isDisabled, type: type }, styleProps, rest), children));
+    const styleProps = getStyles_1.getStyles({ width, fullWidth, isDisabled });
+    return (core_1.jsx(box_1.Box, Object.assign({ as: "button", onClick: onClick, disabled: isDisabled, "aria-disabled": isDisabled, type: type }, styleProps, rest), children));
 };
 //# sourceMappingURL=index.js.map

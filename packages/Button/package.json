@@ -35,7 +35,7 @@
     "styled-system": "5.1.2"
   },
   "dependencies": {
-    "@avj/box": "^0.0.8-alpha.0"
+    "@avj/core": "^0.0.2-alpha.0"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.x",

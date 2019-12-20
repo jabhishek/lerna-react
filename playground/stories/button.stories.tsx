@@ -1,11 +1,10 @@
 import * as React from 'react';
-import {Button} from '../../packages/Button/src';
-import {ThemeProvider} from '../../packages/ThemeProvider/src/';
+import {Button} from '@avj/button';
+import {ThemeProvider, Box} from '@avj/core';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from "@storybook/addon-info";
 import {action} from "@storybook/addon-actions";
 import {SyntheticEvent} from "react";
-import {Box} from "../../packages/Box/src";
 
 export const TestComponent = ({ text }: { text: string }) => {
     return <div>{text}</div>

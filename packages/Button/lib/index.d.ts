@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ButtonHTMLProps, StyledSystemProps } from "@avj/box";
+import { ButtonHTMLProps, StyledSystemProps } from "@avj/core";
 import { FC, MouseEventHandler } from "react";
 declare type ButtonProps = {
     onClick?: MouseEventHandler<HTMLInputElement>;

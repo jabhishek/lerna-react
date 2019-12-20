@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import * as React from "react";
-import {Box, ButtonHTMLProps, StyledSystemProps} from "@avj/box";
+import {Box, ButtonHTMLProps, StyledSystemProps} from "@avj/core";
 import {FC, MouseEventHandler} from "react";
 import {getStyles} from "./getStyles";
 

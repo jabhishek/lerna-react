@@ -21,8 +21,8 @@
     "ts-loader": "^6.2.1"
   },
   "dependencies": {
-    "@avj/button": "0.0.22-alpha.0",
-    "@avj/theme-provider": "0.0.10-alpha.0",
+    "@avj/button": "0.0.23-alpha.0",
+    "@avj/core": "0.0.2-alpha.0",
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
     "emotion-theming": "^10.0.19",

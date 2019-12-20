@@ -2,17 +2,28 @@
 # yarn lockfile v1
 
 
-"@avj/button@0.0.22-alpha.0":
-  version "0.0.22-alpha.0"
-  resolved "https://registry.yarnpkg.com/@avj/button/-/button-0.0.22-alpha.0.tgz#ec3b9efba2dd968923689ecdb4ab6baef9736acb"
-  integrity sha512-xeTeJKsmSHUfBsSJY4tPJNwTiLPF68I0c6Trb058pdQLZuEFD4vd6zhEgx9bqNyRJLuO8HQ2SrcgeIw7AnaFsg==
+"@avj/box@^0.0.8-alpha.0":
+  version "0.0.8-alpha.0"
+  resolved "https://registry.yarnpkg.com/@avj/box/-/box-0.0.8-alpha.0.tgz#c1cc869f5274ab25a69c4a27c9eba2f761ff78c6"
+  integrity sha512-tNzgHFvOqWWi1zPdY/9YZJgz2aMV+SkPSgPyloTHmfJAehV7qVD8ispG9B2MH4O0xB0D22kIyUcCCL6MQZzdPA==
   dependencies:
     "@styled-system/should-forward-prop" "5.1.2"
+    csstype "2.6.7"
 
-"@avj/theme-provider@0.0.10-alpha.0":
-  version "0.0.10-alpha.0"
-  resolved "https://registry.yarnpkg.com/@avj/theme-provider/-/theme-provider-0.0.10-alpha.0.tgz#341c0c45a409623f7a2e65bcd64bc1eaaab84f3d"
-  integrity sha512-kvUO8lk/hhX+bRXVKCYS7aUZlB//cuKCNAuNgu877T9TZvb9yPEwz50GCm/8XvXI5tInu6yHh9Ok0qQ02UFUug==
+"@avj/button@0.0.23-alpha.0":
+  version "0.0.23-alpha.0"
+  resolved "https://registry.yarnpkg.com/@avj/button/-/button-0.0.23-alpha.0.tgz#3cdc662f7c4b42e7d1a747c63f7fb2634cd47777"
+  integrity sha512-0/Tf3nz6WSr3QHv7Fxvi0iC9bIEvWlETr/sUK3u8LT85oVA2yu07T+BsXXy6VptSZHWBJVEEybPylyBRI1vMKw==
+  dependencies:
+    "@avj/box" "^0.0.8-alpha.0"
+
+"@avj/core@0.0.2-alpha.0":
+  version "0.0.2-alpha.0"
+  resolved "https://registry.yarnpkg.com/@avj/core/-/core-0.0.2-alpha.0.tgz#89b56854b6f710b1286eb5fc0ca30a2874f88890"
+  integrity sha512-9HUYPzGLCYYIptsyeXH610Qc7I/EpeV2VjU+YgsS1lR0cQUKqbqC1qxzVbz9TUJYr8xvHJOIwtMrh2JNleN0tA==
+  dependencies:
+    "@styled-system/should-forward-prop" "5.1.2"
+    csstype "2.6.7"
 
 "@babel/code-frame@7.5.5", "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
   version "7.5.5"
@@ -4211,7 +4222,7 @@ csso@^4.0.2:
   dependencies:
     css-tree "1.0.0-alpha.37"
 
-csstype@^2.2.0, csstype@^2.5.7:
+csstype@2.6.7, csstype@^2.2.0, csstype@^2.5.7:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.7.tgz#20b0024c20b6718f4eda3853a1f5a1cce7f5e4a5"
   integrity sha512-9Mcn9sFbGBAdmimWb2gLVDtFJzeKtDGIr76TUqmjZrw9LFXBMSU70lcs+C0/7fyCd6iBDqmksUcCOUIkisPHsQ==

@@ -1,1 +1,1 @@
-{"version":3,"file":"customProps.js","sourceRoot":"","sources":["../src/customProps.ts"],"names":[],"mappings":";;AAAA,iDAAqC;AAOxB,QAAA,KAAK,GAAG;IACjB,MAAM,EAAE,IAAI;CACf,CAAC;AAEW,QAAA,WAAW,GAAG,sBAAM,CAAC,aAAK,CAAC,CAAC"}
+{"version":3,"file":"customProps.js","sourceRoot":"","sources":["../src/customProps.ts"],"names":[],"mappings":";;AAAA,iDAAqC;AAOrC,MAAM,KAAK,GAAG;IACV,MAAM,EAAE,IAAI;CACf,CAAC;AAEW,QAAA,WAAW,GAAG,sBAAM,CAAC,KAAK,CAAC,CAAC"}

@@ -5,7 +5,7 @@ export interface ICustomProps {
     cursor?: CSS.CursorProperty;
 }
 
-export const props = {
+const props = {
     cursor: true,
 };
 

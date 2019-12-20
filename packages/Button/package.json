@@ -35,14 +35,13 @@
     "styled-system": "5.1.2"
   },
   "dependencies": {
-    "@styled-system/should-forward-prop": "5.1.2"
+    "@avj/box": "0.0.7-alpha.0"
   },
   "peerDependencies": {
-    "@emotion/core": "10.0.22",
-    "@emotion/styled": "10.0.23",
-    "react": ">= 16.12",
-    "react-dom": ">= 16.12",
-    "styled-system": "5.1.2"
+    "@emotion/core": "^10.0.x",
+    "@emotion/styled": "^10.0.x",
+    "react": "^16.12.x",
+    "styled-system": "^5.1.x"
   },
   "gitHead": "fd0c10196c58b4e1e94310f69623bdbfd0337fdf"
 }

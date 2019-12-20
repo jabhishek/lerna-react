@@ -1,23 +1,35 @@
 /** @jsx jsx */
 import styled from "@emotion/styled";
 import {customProps, ICustomProps} from './customProps';
-import {createShouldForwardProp} from '@styled-system/should-forward-prop';
 import {
-    background, BackgroundProps,
-    border, BorderProps,
-    color, ColorProps,
-    flexbox, FlexboxProps,
-    grid, GridProps,
-    layout, LayoutProps,
-    position, PositionProps,
-    shadow, ShadowProps,
-    space, SpaceProps,
-    typography, TypographyProps,
-    opacity, OpacityProps,
-    overflow, OverflowProps,
+    background,
+    BackgroundProps,
+    border,
+    BorderProps,
+    color,
+    ColorProps,
+    flexbox,
+    FlexboxProps,
+    grid,
+    GridProps,
+    layout,
+    LayoutProps,
+    opacity,
+    OpacityProps,
+    overflow,
+    OverflowProps,
+    position,
+    PositionProps,
+    shadow,
+    ShadowProps,
+    space,
+    SpaceProps,
+    typography,
+    TypographyProps,
 } from 'styled-system';
 import * as React from "react";
 import {AnchorHTMLAttributes, ButtonHTMLAttributes} from "react";
+import {shouldForwardProp} from "./shouldForwardProp";
 
 export type StyledSystemProps = LayoutProps &
     ColorProps &
@@ -52,8 +64,6 @@ type BoxHTMLProps = HTMLProps & React.RefAttributes<any>;
 export type BoxProps = BoxHTMLProps &
     StyledSystemProps &
     ICustomProps;
-
-const shouldForwardProp = createShouldForwardProp(['cursor']);
 
 export const Box: React.FunctionComponent<BoxProps> = styled('div', {shouldForwardProp})(
     background,

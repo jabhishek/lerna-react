@@ -61,8 +61,8 @@ stories
             >
                 Custom
             </Button>
-            <Button>
-                Hello
+            <Button isDisabled>
+                Disabled
             </Button>
         </div>
     ))
@@ -81,6 +81,8 @@ stories
         <TestComponent text="Abhi"/>
     ))
     .add('Box', () => (
-        <Box />
+        <Box p={10} width={100} borderRadius={4} borderColor="secondary" borderStyle="solid" borderWidth={1}>
+            Hello
+        </Box>
     ));
 

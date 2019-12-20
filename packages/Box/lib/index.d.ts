@@ -1,5 +1,5 @@
 import { ICustomProps } from './customProps';
-import { BackgroundProps, BorderProps, ColorProps, FlexboxProps, GridProps, LayoutProps, PositionProps, ShadowProps, SpaceProps, TypographyProps, OpacityProps, OverflowProps } from 'styled-system';
+import { BackgroundProps, BorderProps, ColorProps, FlexboxProps, GridProps, LayoutProps, OpacityProps, OverflowProps, PositionProps, ShadowProps, SpaceProps, TypographyProps } from 'styled-system';
 import * as React from "react";
 import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 export declare type StyledSystemProps = LayoutProps & ColorProps & SpaceProps & BorderProps & BackgroundProps & PositionProps & FlexboxProps & ShadowProps & GridProps & OpacityProps & OverflowProps & TypographyProps;

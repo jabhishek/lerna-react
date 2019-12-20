@@ -1,39 +1,11 @@
-import * as React from 'react';
-import styled from "@emotion/styled";
-import shouldForwardProp from '@styled-system/should-forward-prop';
-import {
-    color, ColorProps,
-    padding, PaddingProps,
-    width, WidthProps,
-    height, HeightProps,
-    borderRadius, BorderRadiusProps,
-} from 'styled-system';
-import {MouseEventHandler} from "react";
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
+import * as React from "react";
+import {Box, ButtonHTMLProps, StyledSystemProps} from "@avj/box";
+import {FC, MouseEventHandler} from "react";
+import {getStyles} from "./getStyles";
 
-export const StyledButton = styled('button', {shouldForwardProp})(
-    color,
-    padding,
-    width,
-    height,
-    borderRadius,
-    {
-        cursor: 'pointer',
-    },
-    props => ({
-        color: props.theme.colors.secondary,
-        "&:hover": {
-            color: props.theme.colors.primary,
-        }
-    }),
-);
-
-/*
-const StyledButton1 = styled.button`
-  color: ${(props: any) => props.theme.colors.secondary};
-`;
-*/
-
-interface ButtonProps extends ColorProps, WidthProps, PaddingProps, BorderRadiusProps, HeightProps {
+type ButtonProps = {
     /** Click handler */
     onClick?: MouseEventHandler<HTMLInputElement>;
     /** Button text */
@@ -43,38 +15,40 @@ interface ButtonProps extends ColorProps, WidthProps, PaddingProps, BorderRadius
     /** full width */
     fullWidth?: boolean;
     /** type */
-    type?: 'button' | 'submit' | 'reset';
-}
-
-const baseStyles = {
-    p: ["med", "large"],
-    width: ['100%', 'auto'],
-    borderRadius: 'med',
-};
-
-const getWidth = (width: any, fullWidth: boolean) => {
-    if (fullWidth) {
-        return ['100%'];
-    }
-
-    return width || baseStyles.width;
-};
+    type?: "button" | "submit" | "reset";
+} & ButtonHTMLProps & StyledSystemProps;
 
 /**
  * Basic Button component
  */
-export const Button = ({onClick, children, isDisabled = false, type = "button", fullWidth, width, ...rest}: ButtonProps) => {
-    if (type === 'submit' && !!onClick) {
-        console.warn('Click handler was specified for a submit Button. Are you sure?');
+export const Button: FC<ButtonProps> = ({
+                           onClick,
+                           children,
+                           isDisabled = false,
+                           type = "button",
+                           fullWidth = false,
+                           width,
+                           ...rest
+                       }: ButtonProps) => {
+    if (type === "submit" && !!onClick) {
+        console.warn(
+            "Click handler was specified for a submit Button. Are you sure?"
+        );
     }
 
-    return <StyledButton
-        onClick={onClick}
-        disabled={isDisabled}
-        aria-disabled={isDisabled}
-        type={type}
-        {...baseStyles}
-        {...rest}
-        width={getWidth(width, fullWidth)}
-    >{children}</StyledButton>;
+    const styleProps = getStyles({width, fullWidth, isDisabled});
+
+    return (
+        <Box
+            as="button"
+            onClick={onClick}
+            disabled={isDisabled}
+            aria-disabled={isDisabled}
+            type={type}
+            {...styleProps}
+            {...rest}
+        >
+            {children}
+        </Box>
+    );
 };

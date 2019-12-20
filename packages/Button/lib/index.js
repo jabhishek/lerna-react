@@ -22,3 +22,4 @@ exports.Button = (_a) => {
     const styleProps = getStyles_1.getStyles({ width, fullWidth, isDisabled });
     return (core_1.jsx(core_2.Box, Object.assign({ as: "button", onClick: onClick, disabled: isDisabled, "aria-disabled": isDisabled, type: type }, styleProps, rest), children));
 };
+exports.Button.displayName = 'Button';

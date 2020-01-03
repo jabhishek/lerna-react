@@ -7,3 +7,5 @@ exports.ThemeProvider = ThemeProvider_1.ThemeProvider;
 exports.useTheme = ThemeProvider_1.useTheme;
 var Theme_1 = require("./Theme");
 exports.defaultTheme = Theme_1.defaultTheme;
+var index_2 = require("./PseudoBox/index");
+exports.PseudoBox = index_2.PseudoBox;

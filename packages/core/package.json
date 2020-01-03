@@ -1,6 +1,6 @@
 {
   "name": "@avj/core",
-  "version": "0.0.2-alpha.0",
+  "version": "0.0.3-alpha.0",
   "description": "> TODO: description",
   "author": "Abhishek Jain <abhi2000@gmail.com>",
   "homepage": "https://github.com/jabhishek/lerna-react#readme",
@@ -31,8 +31,8 @@
   "devDependencies": {
     "@emotion/styled": "10.0.23",
     "@types/react": "16.9.11",
-    "@types/styled-system__should-forward-prop": "5.1.0",
     "@types/styled-system__css": "5.0.4",
+    "@types/styled-system__should-forward-prop": "5.1.0",
     "emotion-theming": "10.0.19",
     "react": "16.12.0",
     "styled-system": "5.1.2"

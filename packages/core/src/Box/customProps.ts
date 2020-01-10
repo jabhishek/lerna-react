@@ -3,7 +3,6 @@ import * as CSS from 'csstype';
 
 export interface ICustomProps {
     cursor?: CSS.CursorProperty;
-    _disabled?: any;
 }
 
 export const config: { [value: string]: boolean } = {

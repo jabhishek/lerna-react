@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import styled from "@emotion/styled";
 import css from "@styled-system/css";
-import {Box} from "../Box";
+import {Box, BoxProps} from "../Box";
 import { config } from "../Box/customProps";
+import {FunctionComponent} from "react";
 
 /**
  * The selectors are based on [WAI-ARIA state properties](https://www.w3.org/WAI/PF/aria-1.1/states_and_properties) and common CSS Selectors
@@ -37,8 +38,13 @@ export const transformAliasProps = (props: any) => {
     return result;
 };
 
-export const PseudoBox = styled(Box)(
-    (props) => {
+type PseudoBoxProps = {
+    _disabled?: any
+}
+
+// @ts-ignore
+export const PseudoBox: FunctionComponent<PseudoBoxProps & BoxProps> = styled(Box)(
+    (props: PseudoBoxProps) => {
         const {_disabled} = props;
         return css({
             [disabled]: transformAliasProps(_disabled),
